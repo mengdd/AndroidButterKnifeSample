@@ -3,4 +3,10 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!--Demos name in list-->
+    <string name="demo_find_view_in_activity">Find View in Activity</string>
+
+    <!--Demo1: Simple Activity-->
+    <string name="title_activity_simple">SimpleActivity</string>
 </resources>
