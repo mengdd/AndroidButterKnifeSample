@@ -7,6 +7,7 @@
     <!--Demos name in list-->
     <string name="demo_find_view_in_activity">Find View in Activity</string>
     <string name="demo_find_view_in_fragment">Find View in Fragment</string>
+    <string name="demo_find_view_in_adapter">Find View in Adapter</string>
 
     <!--Demo1: Simple Activity-->
     <string name="title_activity_simple">SimpleActivity</string>
@@ -17,6 +18,7 @@
     <!--Demo2: Simple Fragment-->
     <string name="title_activity_simple_fragment">SimpleFragmentActivity</string>
     <string name="simple_fragment_text">Simple Fragment</string>
+    <string name="title_activity_list_view">ListViewActivity</string>
 
 
 </resources>

@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         mSamples = new Sample[]{
                 new Sample(R.string.demo_find_view_in_activity, SimpleActivity.class),
-                new Sample(R.string.demo_find_view_in_fragment, SimpleFragmentActivity.class)
+                new Sample(R.string.demo_find_view_in_fragment, SimpleFragmentActivity.class),
+                new Sample(R.string.demo_find_view_in_adapter, ListViewActivity.class)
         };
 
         mListView.setAdapter(new ArrayAdapter<Sample>(this, android.R.layout.simple_list_item_1, android.R.id.text1, mSamples));
