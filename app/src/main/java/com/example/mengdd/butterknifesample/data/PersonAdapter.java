@@ -11,6 +11,9 @@ import com.example.mengdd.butterknifesample.R;
 
 import java.util.List;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
 public class PersonAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
 
@@ -66,12 +69,7 @@ public class PersonAdapter extends BaseAdapter {
 
             // Creates a ViewHolder and store references to the two children views
             // we want to bind data to.
-            holder = new ViewHolder();
-            holder.name = (TextView) convertView.findViewById(R.id.person_name);
-            holder.age = (TextView) convertView.findViewById(R.id.person_age);
-            holder.location = (TextView) convertView.findViewById(R.id.person_location);
-            holder.work = (TextView) convertView.findViewById(R.id.person_work);
-
+            holder = new ViewHolder(convertView);
             convertView.setTag(holder);
         } else {
             // Get the ViewHolder back to get fast access to the TextView
@@ -93,9 +91,17 @@ public class PersonAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
+        @InjectView(R.id.person_name)
         TextView name;
+        @InjectView(R.id.person_age)
         TextView age;
+        @InjectView(R.id.person_location)
         TextView location;
+        @InjectView(R.id.person_work)
         TextView work;
+
+        public ViewHolder(View view) {
+            ButterKnife.inject(this, view);
+        }
     }
 }
