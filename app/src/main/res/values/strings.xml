@@ -6,11 +6,17 @@
 
     <!--Demos name in list-->
     <string name="demo_find_view_in_activity">Find View in Activity</string>
+    <string name="demo_find_view_in_fragment">Find View in Fragment</string>
 
     <!--Demo1: Simple Activity-->
     <string name="title_activity_simple">SimpleActivity</string>
     <string name="simple_text_view">TextView</string>
     <string name="simple_button">Button</string>
     <string name="simple_checkbox">CheckBox</string>
-    <string name="simple_list_view">ListView</string>
+
+    <!--Demo2: Simple Fragment-->
+    <string name="title_activity_simple_fragment">SimpleFragmentActivity</string>
+    <string name="simple_fragment_text">Simple Fragment</string>
+
+
 </resources>
