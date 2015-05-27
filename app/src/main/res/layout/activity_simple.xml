@@ -10,8 +10,21 @@
     tools:context="com.example.mengdd.butterknifesample.SimpleActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/simple_activity_text_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/simple_text_view" />
+
+    <Button
+        android:id="@+id/simple_activity_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_button" />
+
+    <CheckBox
+        android:id="@+id/simple_activity_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_checkbox" />
 
 </LinearLayout>

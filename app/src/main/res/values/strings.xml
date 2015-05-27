@@ -9,4 +9,8 @@
 
     <!--Demo1: Simple Activity-->
     <string name="title_activity_simple">SimpleActivity</string>
+    <string name="simple_text_view">TextView</string>
+    <string name="simple_button">Button</string>
+    <string name="simple_checkbox">CheckBox</string>
+    <string name="simple_list_view">ListView</string>
 </resources>

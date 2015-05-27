@@ -1,39 +1,71 @@
 package com.example.mengdd.butterknifesample;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnCheckedChanged;
+import butterknife.OnClick;
 
 
 public class SimpleActivity extends AppCompatActivity {
+
+    //ButterKnife can be used to findViews
+
+    @InjectView(R.id.simple_activity_text_view)
+    TextView mTextView;
+    //this field should not be declared private or static
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simple);
+
+        // ButterKnife.inject(this) should be called after setContentView()
+        ButterKnife.inject(this);
+
+        //you do not need to write:
+        //mTextView = (TextView)findViewById(R.id.simple_activity_text_view);
+        //mTextView can be used directly
+        mTextView.setText("TextView is found!");
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_simple, menu);
-        return true;
+    @OnClick(R.id.simple_activity_button)
+    void onButtonClick(View view) {
+        //this method handle the onClick event for the View specified by id
+        //the method should not be declared private or static
+        //you can write the parameter (View view) as above or just write onButtonClick() leave parameters empty, both are ok
+
+        Toast.makeText(this, "Button Click!", Toast.LENGTH_SHORT).show();
+
+        //Without ButterKnife, you may write things like that:
+
+        //        Button button = (Button) findViewById(R.id.simple_activity_button);
+        //        button.setOnClickListener(new View.OnClickListener() {
+        //            @Override
+        //            public void onClick(View v) {
+        //                Toast.makeText(SimpleActivity.this, "Button Click!", Toast.LENGTH_SHORT).show();
+        //            }
+        //        });
+
+        //now it's unnecessary.
+
+
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    //bind event to CheckBox
+    @OnCheckedChanged(R.id.simple_activity_checkbox)
+    void onCheckedChanged(CompoundButton button, boolean checked) {
+        Toast.makeText(this, "CheckBox Changed! " + checked, Toast.LENGTH_SHORT).show();
     }
+
 }
