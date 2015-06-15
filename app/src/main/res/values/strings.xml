@@ -7,7 +7,7 @@
     <!--Demos name in list-->
     <string name="demo_find_view_in_activity">Find View in Activity</string>
     <string name="demo_find_view_in_fragment">Find View in Fragment</string>
-    <string name="demo_find_view_in_adapter">Find View in Adapter</string>
+    <string name="demo_find_view_in_listview">Find View in ListView and Adapter</string>
 
     <!--Demo1: Simple Activity-->
     <string name="title_activity_simple">SimpleActivity</string>

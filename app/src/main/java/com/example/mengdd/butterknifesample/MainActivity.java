@@ -2,7 +2,6 @@ package com.example.mengdd.butterknifesample;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         mSamples = new Sample[]{
                 new Sample(R.string.demo_find_view_in_activity, SimpleActivity.class),
                 new Sample(R.string.demo_find_view_in_fragment, SimpleFragmentActivity.class),
-                new Sample(R.string.demo_find_view_in_adapter, ListViewActivity.class)
+                new Sample(R.string.demo_find_view_in_listview, ListViewActivity.class)
         };
 
         mListView.setAdapter(new ArrayAdapter<Sample>(this, android.R.layout.simple_list_item_1, android.R.id.text1, mSamples));
