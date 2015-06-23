@@ -41,4 +41,10 @@ public class SimpleFragment extends Fragment {
         //        }
         return view;
     }
+
+    @Override
+    public void onDestroyView() {
+        ButterKnife.reset(this);
+        super.onDestroyView();
+    }
 }
