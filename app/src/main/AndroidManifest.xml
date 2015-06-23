@@ -28,6 +28,10 @@
             android:name=".ListViewActivity"
             android:label="@string/title_activity_list_view" >
         </activity>
+        <activity
+            android:name=".ViewListActivity"
+            android:label="@string/title_activity_view_lists" >
+        </activity>
     </application>
 
 </manifest>

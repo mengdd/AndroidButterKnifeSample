@@ -8,6 +8,7 @@
     <string name="demo_find_view_in_activity">Find View in Activity</string>
     <string name="demo_find_view_in_fragment">Find View in Fragment</string>
     <string name="demo_find_view_in_listview">Find View in ListView and Adapter</string>
+    <string name="demo_find_views_into_list">Find Views into a List</string>
 
     <!--Demo1: Simple Activity-->
     <string name="title_activity_simple">SimpleActivity</string>
@@ -18,7 +19,19 @@
     <!--Demo2: Simple Fragment-->
     <string name="title_activity_simple_fragment">SimpleFragmentActivity</string>
     <string name="simple_fragment_text">Simple Fragment</string>
+
+    <!--Demo3: ListView and Adapter-->
     <string name="title_activity_list_view">ListViewActivity</string>
+
+    <!--Demo4: Multiple Views in List-->
+    <string name="title_activity_view_lists">ViewListsActivity</string>
+    <string name="label_first">First Name</string>
+    <string name="label_middle">Middle Name</string>
+    <string name="label_last">Last Name</string>
+    <string name="button_enable">Enable</string>
+    <string name="button_disable">Disable</string>
+    <string name="button_alpha_0">Alpha to 0</string>
+    <string name="button_alpha_1">Alpha to 1</string>
 
 
 </resources>
