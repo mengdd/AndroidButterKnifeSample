@@ -9,6 +9,7 @@
     <string name="demo_find_view_in_fragment">Find View in Fragment</string>
     <string name="demo_find_view_in_listview">Find View in ListView and Adapter</string>
     <string name="demo_find_views_into_list">Find Views into a List</string>
+    <string name="demo_item_selected_listener">Item Selected Listener in Spinner</string>
 
     <!--Demo1: Simple Activity-->
     <string name="title_activity_simple">SimpleActivity</string>
@@ -32,6 +33,21 @@
     <string name="button_disable">Disable</string>
     <string name="button_alpha_0">Alpha to 0</string>
     <string name="button_alpha_1">Alpha to 1</string>
+
+    <!--Demo5: Spinner onItemSelected-->
+    <string name="title_activity_spinner">SpinnerActivity</string>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <string name="clear_spinner_data">Clear</string>
+    <string name="set_spinner_data">Set</string>
 
 
 </resources>

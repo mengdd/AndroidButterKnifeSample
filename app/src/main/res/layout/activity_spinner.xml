@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/my_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/clear_spinner_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_spinner_data" />
+
+    <Button
+        android:id="@+id/set_spinner_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/set_spinner_data" />
+
+</LinearLayout>

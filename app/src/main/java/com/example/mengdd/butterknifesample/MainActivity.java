@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 new Sample(R.string.demo_find_view_in_activity, SimpleActivity.class),
                 new Sample(R.string.demo_find_view_in_fragment, SimpleFragmentActivity.class),
                 new Sample(R.string.demo_find_view_in_listview, ListViewActivity.class),
-                new Sample(R.string.demo_find_views_into_list, ViewListActivity.class)
+                new Sample(R.string.demo_find_views_into_list, ViewListActivity.class),
+                new Sample(R.string.demo_item_selected_listener, SpinnerActivity.class)
         };
 
         mListView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1, mSamples));
