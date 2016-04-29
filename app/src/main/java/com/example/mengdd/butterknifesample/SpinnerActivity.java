@@ -10,14 +10,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import butterknife.OnItemSelected;
 
 public class SpinnerActivity extends AppCompatActivity {
 
-    @InjectView(R.id.my_spinner)
+    @BindView(R.id.my_spinner)
     Spinner mSpinner;
     private ArrayAdapter<CharSequence> adapter;
     private List<CharSequence> items;
@@ -27,7 +27,7 @@ public class SpinnerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinner);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         // Create an ArrayAdapter using the string array and a default spinner layout
 
         //adapter = ArrayAdapter.createFromResource(this,

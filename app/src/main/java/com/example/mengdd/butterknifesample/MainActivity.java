@@ -11,15 +11,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnItemClick;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private static Sample[] mSamples;
-    @InjectView(R.id.samples_list)
+    @BindView(R.id.samples_list)
     ListView mListView;
 
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         mSamples = new Sample[]{
                 new Sample(R.string.demo_find_view_in_activity, SimpleActivity.class),

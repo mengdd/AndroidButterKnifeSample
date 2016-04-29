@@ -11,8 +11,8 @@ import com.example.mengdd.butterknifesample.R;
 
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 public class PersonAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
@@ -91,17 +91,17 @@ public class PersonAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
-        @InjectView(R.id.person_name)
+        @BindView(R.id.person_name)
         TextView name;
-        @InjectView(R.id.person_age)
+        @BindView(R.id.person_age)
         TextView age;
-        @InjectView(R.id.person_location)
+        @BindView(R.id.person_location)
         TextView location;
-        @InjectView(R.id.person_work)
+        @BindView(R.id.person_work)
         TextView work;
 
         public ViewHolder(View view) {
-            ButterKnife.inject(this, view);
+            ButterKnife.bind(this, view);
         }
     }
 }

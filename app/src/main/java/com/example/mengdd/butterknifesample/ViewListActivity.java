@@ -9,17 +9,17 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import butterknife.BindViews;
 import butterknife.ButterKnife;
-import butterknife.InjectViews;
 import butterknife.OnClick;
 
 
 public class ViewListActivity extends AppCompatActivity {
 
-    @InjectViews({R.id.label_first_name, R.id.label_middle_name, R.id.label_last_name})
+    @BindViews({R.id.label_first_name, R.id.label_middle_name, R.id.label_last_name})
     List<TextView> labelViews;
 
-    @InjectViews({R.id.first_name, R.id.middle_name, R.id.last_name})
+    @BindViews({R.id.first_name, R.id.middle_name, R.id.last_name})
     List<EditText> nameViews;
 
 
@@ -27,7 +27,7 @@ public class ViewListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_list);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
 

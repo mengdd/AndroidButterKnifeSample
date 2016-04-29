@@ -8,15 +8,15 @@ import android.widget.Toast;
 import com.example.mengdd.butterknifesample.data.MockDataUtils;
 import com.example.mengdd.butterknifesample.data.PersonAdapter;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnItemClick;
 import butterknife.OnItemLongClick;
 
 
 public class ListViewActivity extends AppCompatActivity {
 
-    @InjectView(R.id.my_list_view)
+    @BindView(R.id.my_list_view)
     ListView mListView;
     private PersonAdapter adapter;
 
@@ -24,7 +24,7 @@ public class ListViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         adapter = new PersonAdapter(this, MockDataUtils.getPersons());
         mListView.setAdapter(adapter);

@@ -3,15 +3,12 @@ package com.example.mengdd.butterknifesample;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 
@@ -20,7 +17,7 @@ public class SimpleActivity extends AppCompatActivity {
 
     //ButterKnife can be used to findViews
 
-    @InjectView(R.id.simple_activity_text_view)
+    @BindView(R.id.simple_activity_text_view)
     TextView mTextView;
     //this field should not be declared private or static
 
@@ -31,7 +28,7 @@ public class SimpleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_simple);
 
         // ButterKnife.inject(this) should be called after setContentView()
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         //you do not need to write:
         //mTextView = (TextView)findViewById(R.id.simple_activity_text_view);

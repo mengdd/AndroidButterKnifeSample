@@ -1,19 +1,21 @@
 package com.example.mengdd.butterknifesample;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.Unbinder;
 
 public class SimpleFragment extends Fragment {
 
-    @InjectView(R.id.fragment_text_view)
+    @BindView(R.id.fragment_text_view)
     TextView mTextView;
+    private Unbinder unbinder;
 
     public SimpleFragment() {
     }
@@ -23,7 +25,7 @@ public class SimpleFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_simple, container, false);
 
-        ButterKnife.inject(this, view);
+        unbinder = ButterKnife.bind(this, view);
 
         mTextView.setText("TextView in Fragment are found!");
         //This method doc:
@@ -44,7 +46,7 @@ public class SimpleFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
-        ButterKnife.reset(this);
+        unbinder.unbind();
         super.onDestroyView();
     }
 }
