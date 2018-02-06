@@ -37,7 +37,7 @@ public class ListViewActivity extends AppCompatActivity {
     }
 
     @OnItemLongClick(R.id.my_list_view)
-    boolean onItmeLongClick(int position) {
+    boolean onItemLongClick(int position) {
         Toast.makeText(this, "You Long Click: " + adapter.getItem(position).getName(), Toast.LENGTH_SHORT).show();
         return true; //if return false, the onItemClick() will be invoked when touch up
     }
